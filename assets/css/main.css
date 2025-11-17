@@ -1,0 +1,138 @@
+/* GENERAL NAV STYLES --------- */
+.navbar {
+    width: calc(100% - 600px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* NAV LINKS (Desktop) */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+
+}
+
+.nav-links .btn {
+    padding: 0.5rem 1.2rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    margin-left: 2.5rem;
+}
+
+/* HAMBURGER BUTTON STYLES  
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #000;
+    display: block;
+    transition: 0.3s ease;
+}
+
+*/
+
+
+/* RESPONSIVE -- */
+/* TABLET + MOBILE */
+@media (max-width: 768px) {
+
+    /* Show hamburger */
+    /* .hamburger {
+        display: flex;
+    } */
+
+    /* Hide nav links by default */
+    /* .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        background: #fff;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
+
+    /* Hidden state */
+    /* opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: 0.3s ease;
+    } */
+
+    /* When active */
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* DESKTOP */
+@media (min-width: 1280px) {
+    .navbar {
+        width: 1320px;
+        /* 300px gaps on each side */
+        height: 105px;
+        margin: 0 auto;
+
+    }
+
+    .logo img {
+        height: 95px;
+        width: 140px;
+
+    }
+}
+
+/* TABLET  */
+@media (min-width: 768px) and (max-width: 1280px) {
+    .navbar {
+        width: calc(100% - 200px);
+        height: 90px;
+        margin: 0 auto;
+    }
+
+    .logo img {
+        height: 75px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 90%;
+        height: 70px;
+        margin: 0 auto;
+    }
+
+    .logo img {
+        height: 70px;
+        /* smaller than navbar height */
+        width: 90px;
+        /* maintain aspect ratio */
+    }
+}
