@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+
 }
 
 .banner {
@@ -111,9 +113,9 @@
         margin-top: 5px;
     }
     .description{
-        /* margin: 0px;
-        padding: 0px; */
-        width: auto;
+     .description{
+         width: auto;
+     }        width: auto;
     }
     .banner-text h1 {
         font-size: 1.5rem;
