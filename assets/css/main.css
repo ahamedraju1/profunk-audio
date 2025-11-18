@@ -1,138 +1,113 @@
-/* GENERAL NAV STYLES --------- */
-.navbar {
-    width: calc(100% - 600px);
-    margin: 0 auto;
+.section {
+    margin-top: 80px;
+    width: 75%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 16px;
+}
+
+.sound-title {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.sound_description {
+    margin-bottom: 18px;
+    color: rgba(119, 121, 128, 1);
+}
+
+.sound-section {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-
-
-/* NAV LINKS (Desktop) */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
     align-items: center;
+    gap: 30px;
+     
 }
 
-.nav-links li a {
-    text-decoration: none;
-    color: #000;
+
+.buttons {
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+}
+
+.btn {
+    width: 111px;
+    height: 48px;
+    background-color: rgba(234, 239, 242, 1);
+    color: rgba(119, 121, 128, 1);
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    font-size: 16px;
     font-weight: 500;
-
+    padding: 11px 16px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+   
+   
 }
 
-.nav-links .btn {
-    padding: 0.5rem 1.2rem;
-    background-color: #000;
-    color: #fff;
-    border-radius: 4px;
-    margin-left: 2.5rem;
-}
-
-/* HAMBURGER BUTTON STYLES  
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    background: none;
+button {
+    width: 185px;
+    height: 48px;
+    background-color: rgba(29, 31, 44, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 8px 24px;
+    font-size: 18px;
+    font-weight: 500;
     border: none;
-    cursor: pointer;
+    border-radius: 8px;
+    white-space: nowrap;
+    margin-left: 15px;
+
 }
 
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: #000;
-    display: block;
-    transition: 0.3s ease;
+.icon {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 16px;
+    gap: 10px;
+    width: 52px;
+    height: 48px;
+    background: #EAEFF2;
+    border: 1px solid #EAEFF2;
+    border-radius: 0px 8px 8px 0px;
+
 }
 
-*/
 
 
-/* RESPONSIVE -- */
-/* TABLET + MOBILE */
-@media (max-width: 768px) {
+/* Tablet: 768px - 1279px */
+@media (min-width: 768px) and (max-width: 1279px) {
+    .sound-section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+    .sound-title {
+        font-size: 29px;
+    }
+}
 
-    /* Show hamburger */
-    /* .hamburger {
+/* mobile stack */
+@media (max-width: 767px) {
+    .sound-section {
         display: flex;
-    } */
-
-    /* Hide nav links by default */
-    /* .nav-links {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 200px;
-        background: #fff;
         flex-direction: column;
-        gap: 1.5rem;
-        padding: 1.5rem;
-        border-radius: 6px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
-
-    /* Hidden state */
-    /* opacity: 0;
-        visibility: hidden;
-        transform: translateY(-20px);
-        transition: 0.3s ease;
-    } */
-
-    /* When active */
-    .nav-links.active {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
+        gap: 20px;
     }
+    .sound-title {
+        font-size: 30px;
+        /* smaller on mobile */
+    }
+   
 }
 
-
-
-/* DESKTOP */
-@media (min-width: 1280px) {
-    .navbar {
-        width: 1320px;
-        /* 300px gaps on each side */
-        height: 105px;
-        margin: 0 auto;
-
-    }
-
-    .logo img {
-        height: 95px;
-        width: 140px;
-
-    }
-}
-
-/* TABLET  */
-@media (min-width: 768px) and (max-width: 1280px) {
-    .navbar {
-        width: calc(100% - 200px);
-        height: 90px;
-        margin: 0 auto;
-    }
-
-    .logo img {
-        height: 75px;
-        width: 100px;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        width: 90%;
-        height: 70px;
-        margin: 0 auto;
-    }
-
-    .logo img {
-        height: 70px;
-        /* smaller than navbar height */
-        width: 90px;
-        /* maintain aspect ratio */
-    }
-}
